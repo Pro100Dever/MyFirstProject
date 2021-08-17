@@ -1,0 +1,129 @@
+.header {
+  padding-left: 15px;
+  height: 64px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  background-color: $color-bg-color-white;
+
+  @include for-large-up {
+    margin: auto;
+    width: 1140px;
+    height: 62px;
+    display: flex;
+    background-color: transparent;
+  }
+
+  &-button {
+    display: none;
+
+    @include for-large-up {
+      display: block;
+    }
+  }
+
+  &_menu-button {
+    margin-left: auto;
+    display: block;
+    width: 58px;
+    height: 100%;
+    border: none;
+    border-left: 1px solid $text-button-light-black;
+    background-color: transparent;
+
+    @include for-large-up {
+      display: none;
+    }
+  }
+
+  &_menu-icon {
+    width: 18px;
+    height: 13px;
+    background-image: url(https://gromcode.s3.eu-central-1.amazonaws.com/front-end/html-css/lesson24/hw1/icon-hamburger.png);
+    display: inline-block;
+  }
+
+  .logo__description {
+    display: none;
+
+    @include for-large-up {
+      display: block;
+    }
+  }
+}
+
+.navigations {
+  display: none;
+
+  @include for-large-up {
+    margin-left: auto;
+    margin-right: 75px;
+    display: block;
+  }
+
+  &__item {
+    margin-right: 50px;
+    font-size: 18px;
+    line-height: 25px;
+    color: $color-dark;
+    text-decoration: none;
+  }
+  &__item_selected {
+    font-weight: 700;
+  }
+  &__item:last-child {
+    margin-right: 0px;
+  }
+  &__arrow {
+    margin-left: 11px;
+    height: 5px;
+    width: 8px;
+    display: inline-block;
+    background-image: url(https://gromcode.s3.eu-central-1.amazonaws.com/front-end/html-css/lesson24/hw1/arrow.png);
+  }
+}
+
+.logo {
+  display: flex;
+
+  &__image {
+    margin-right: 13px;
+    width: 48px;
+    height: 48px;
+
+    @include for-large-up {
+      margin-right: 15px;
+      width: 60px;
+      height: 60px;
+    }
+  }
+
+  &__name {
+    font-size: 20px;
+
+    line-height: 25px;
+    font-weight: 700;
+  }
+
+  &__description {
+    font-size: 18px;
+    line-height: 25px;
+    color: $color-dark;
+    opacity: 0.6;
+  }
+  &__text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+}
+
+.section-top {
+  background-color: $color-bg-color-pink;
+
+  @include for-large-up {
+    padding: 39px;
+    padding-bottom: 0px;
+    background-color: $color-bg-color-pink;
+  }
+}

@@ -1,0 +1,156 @@
+.hiring {
+  padding: 50px 15px;
+  min-height: 860px;
+
+  @include for-large-up {
+    margin: 106px auto 110px;
+    padding: 0;
+    width: 100%;
+    min-width: 750px;
+    min-height: 630px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__title {
+    margin: 0;
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 40px;
+    text-align: center;
+    letter-spacing: -0.36px;
+
+    @include for-large-up {
+      font-size: 56px;
+      line-height: 56px;
+      text-align: center;
+      letter-spacing: -0.5px;
+    }
+  }
+
+  &__text {
+    margin: 0;
+    margin-top: 18px;
+    font-size: 24px;
+    line-height: 34px;
+    letter-spacing: -0.5px;
+    text-align: center;
+
+    @include for-large-up {
+      margin-top: 20px;
+      width: 555px;
+    }
+  }
+
+  &__button {
+    @extend %button-started;
+    margin-top: 30px;
+    min-width: 100%;
+
+    @include for-large-up {
+      margin-top: 28px;
+      min-width: 247px;
+    }
+  }
+
+  &__vacancies {
+    margin-top: 39px;
+    height: 140px;
+
+    @include for-large-up {
+      margin-top: 110px;
+      width: 100%;
+      height: 300px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+
+  &__vacancy {
+    margin-top: 15px;
+    height: 140px;
+
+    @include for-large-up {
+      margin-top: 30px;
+      height: 81px;
+      width: 750px;
+    }
+
+    &:first-child {
+      margin-top: 0;
+    }
+  }
+}
+
+.vacancy {
+  display: flex;
+  text-decoration: none;
+  overflow: hidden;
+  border-radius: 8px;
+  border: 1px solid $text-color-light-grey-too;
+
+  &:hover {
+    background-color: $color-bg-color-blue;
+
+    .vacancy__title {
+      color: $color-bg-color-white;
+    }
+    .vacancy__location {
+      color: $color-bg-color-white;
+    }
+    .vacancy__arrow-container {
+      background-color: transparent;
+    }
+
+    .icon-arrow_right {
+      background-image: url(https://gromcode.s3.eu-central-1.amazonaws.com/front-end/html-css/lesson24/hw1/icon-arrow-right-white.png);
+    }
+  }
+
+  &__details {
+    padding: 20px;
+    flex: 1;
+
+    @include for-large-up {
+      display: flex;
+      align-items: center;
+    }
+  }
+
+  &__title {
+    font-size: 22px;
+    line-height: 28px;
+    font-weight: 700;
+    color: $color-dark;
+  }
+
+  &__location {
+    margin-top: 17px;
+    font-size: 16px;
+    line-height: 22px;
+    color: $color-dark;
+    opacity: 0.6;
+
+    @include for-large-up {
+      margin-top: 0;
+      max-width: 232px;
+      flex: 1;
+      margin-left: auto;
+    }
+  }
+
+  &__arrow-container {
+    width: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $color-bg-color-hiring;
+
+    @include for-large-up {
+      width: 50px;
+      background-color: $color-text-white;
+    }
+  }
+}

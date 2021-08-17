@@ -1,0 +1,135 @@
+.audience {
+  padding: 50px 15px;
+  text-align: center;
+  background-color: rgba(0, 161, 198, 0.07);
+
+  @include for-large-up {
+    padding: 108px 0px 110px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  &__name {
+    font-size: 22px;
+    line-height: 34px;
+    font-weight: 700;
+  }
+
+  &__title {
+    margin: 0;
+    margin-top: 17px;
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 40px;
+    letter-spacing: -0.36px;
+
+    @include for-large-up {
+      margin: auto;
+      max-width: 555px;
+      margin-top: 24px;
+      font-size: 56px;
+      line-height: 56px;
+      letter-spacing: -0.5px;
+    }
+  }
+
+  &__text {
+    margin-top: 18px;
+    margin-bottom: 30px;
+    font-size: 24px;
+    line-height: 34px;
+
+    @include for-large-up {
+      margin: auto;
+      margin-top: 30px;
+      margin-bottom: 34px;
+      max-width: 555px;
+    }
+  }
+
+  &__basik-button {
+    &_started {
+      margin-bottom: 12px;
+      @extend %button-started;
+
+      @include for-large-up {
+        margin: 0;
+      }
+
+      @include for-large-down {
+        min-width: 100%;
+      }
+    }
+    &_learn {
+      @extend %button-learn;
+      margin-bottom: 40px;
+
+      @include for-large-up {
+        margin: 0;
+        margin-left: 4px;
+      }
+
+      @include for-large-down {
+        min-width: 100%;
+      }
+    }
+  }
+
+  &__pictures {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    @include for-large-up {
+      margin-top: 111px;
+      flex-direction: row;
+      justify-content: center;
+    }
+  }
+}
+
+.picture {
+  margin-bottom: 15px;
+  width: 290px;
+  height: 300px;
+  border-radius: 8px;
+  background-color: $color-text-white;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1);
+
+  &:last-child {
+    margin-bottom: 0px;
+  }
+
+  &:hover {
+    background-color: $color-bg-color-blue;
+    color: $color-text-white;
+  }
+
+  @include for-large-up {
+    margin-left: 30px;
+    margin-bottom: 0;
+    width: 262px;
+
+    &:first-child {
+      margin: 0;
+    }
+  }
+
+  &__img {
+    margin: 22px auto;
+  }
+
+  &__img img {
+    width: 100%;
+    height: 195px;
+  }
+
+  &__text {
+    margin-bottom: 33px;
+    display: flex;
+    flex-direction: column;
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 28px;
+  }
+}
