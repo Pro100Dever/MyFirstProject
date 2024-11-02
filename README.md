@@ -13,4 +13,4 @@ Layout supports mobile (up-to-320) and desktop (up-to-1440) versions
 - [BEM methodology](https://en.bem.info/methodology/)
 
 ### Author:
-- Берестенко Владимир (Pro100Dever)
+- Volodymyr Berestenko (Pro100Dever)
